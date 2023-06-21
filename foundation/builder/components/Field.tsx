@@ -52,25 +52,25 @@ const Field = ({ field }) => {
             rows={config.rows}
           ></textarea>
         );
-      case "checkbox":
-        return (
-          <div className={`form-check ${config.inputClasses}`}>
-            <input
-              className="form-check-input"
-              type="checkbox"
-              value={config.value}
-              id={config.id}
-              name={config.name}
-              disabled={config.disabled}
-              required={config.required}
-              readOnly={config.readonly}
-              defaultChecked={config.checked}
-            />
-            <label className="form-check-label" htmlFor="flexCheckDefault">
-              {config.label || "Checkbox input"}
-            </label>
-          </div>
-        );
+      // case "checkbox":
+      //   return (
+      //     <div className={`form-check ${config.inputClasses}`}>
+      //       <input
+      //         className="form-check-input"
+      //         type="checkbox"
+      //         value={config.value}
+      //         id={config.id}
+      //         name={config.name}
+      //         disabled={config.disabled}
+      //         required={config.required}
+      //         readOnly={config.readonly}
+      //         defaultChecked={config.checked}
+      //       />
+      //       <label className="form-check-label" htmlFor="flexCheckDefault">
+      //         {config.label || "Checkbox input"}
+      //       </label>
+      //     </div>
+      //   );
       case "radio":
         return (
           <div className={`form-check ${config.inputClasses}`}>

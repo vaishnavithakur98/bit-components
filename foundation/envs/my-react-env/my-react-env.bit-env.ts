@@ -4,15 +4,17 @@
  * */
 import { ReactEnv } from "@teambit/react.react-env";
 import { Compiler } from "@teambit/compiler";
+import { ReactPreview } from "@teambit/preview.react-preview";
 import { EnvHandler } from "@teambit/envs";
 import {
   TypescriptCompiler,
   resolveTypes,
-  TypescriptTask
+  TypescriptTask,
 } from "@teambit/typescript.typescript-compiler";
 import { JestTester, JestTask } from "@teambit/defender.jest-tester";
-// import { BabelCompiler, BabelTask } from "@teambit/compilation.babel-compiler";
 import { Tester } from "@teambit/tester";
+import { Preview } from "@teambit/preview";
+import hostDependencies from "./preview/host-dependencies";
 // import { webpackTransformer } from './config/webpack.config';
 
 export class GryppReactEnv extends ReactEnv {
@@ -26,7 +28,7 @@ export class GryppReactEnv extends ReactEnv {
      * */
     return TypescriptCompiler.from({
       tsconfig: require.resolve("./config/tsconfig.json"),
-      types: resolveTypes(__dirname, ["./types"])
+      types: resolveTypes(__dirname, ["./types"]),
     });
   }
 
@@ -37,7 +39,22 @@ export class GryppReactEnv extends ReactEnv {
      * */
     return JestTester.from({
       jest: require.resolve("jest"),
-      config: require.resolve("./config/jest.config")
+      config: require.resolve("./config/jest.config"),
+    });
+  }
+
+  /**
+   * generates the component previews during development and during build
+   */
+  preview(): EnvHandler<Preview> {
+    /**
+     * @see https://bit.dev/docs/react-env/component-previews
+     */
+    return ReactPreview.from({
+      mounter: require.resolve("./preview/mounter"),
+      docsTemplate: require.resolve("./preview/docs"),
+      hostDependencies,
+      // transformers: [webpackTransformer],
     });
   }
 
@@ -49,12 +66,12 @@ export class GryppReactEnv extends ReactEnv {
     return super.build().replace([
       TypescriptTask.from({
         tsconfig: require.resolve("./config/tsconfig.json"),
-        types: resolveTypes(__dirname, ["./types"])
+        types: resolveTypes(__dirname, ["./types"]),
       }),
       JestTask.from({
         config: require.resolve("./config/jest.config"),
-        jest: require.resolve("jest")
-      })
+        jest: require.resolve("jest"),
+      }),
     ]);
   }
 }

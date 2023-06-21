@@ -17,6 +17,7 @@ importers:
       '@teambit/preview.react-preview': ^0.0.36
       '@teambit/react.jest.react-jest': ^0.0.6
       '@teambit/react.react-env': ^0.1.2
+      '@teambit/react.v17.docs-template': ^0.0.1
       '@teambit/typescript.typescript-compiler': ^0.0.9
       '@testing-library/react': 12.0.0
       '@types/jest': '>=26.0.0 <27.0.0'
@@ -42,6 +43,7 @@ importers:
       '@teambit/preview.react-preview': 0.0.36_l43rakp6guttv32p2ii5gzeuiq
       '@teambit/react.jest.react-jest': 0.0.6_dh7eorevu3wxytekktkpe3eaai
       '@teambit/react.react-env': 0.1.3_d3bxvl54majxpg6kniaxoo7suy
+      '@teambit/react.v17.docs-template': 0.0.1_ovbvkrawmpkh7nt5qpjhpj46mm
       '@teambit/typescript.typescript-compiler': 0.0.9
       '@testing-library/react': registry.npmjs.org/@testing-library/react/12.0.0_sfoxds7t5ydpegc3knd667wn6m
       '@typescript-eslint/eslint-plugin': registry.npmjs.org/@typescript-eslint/eslint-plugin/4.29.3
@@ -677,6 +679,29 @@ packages:
       webpack-merge: registry.npmjs.org/webpack-merge/5.8.0
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@teambit/react.v17.docs-template/0.0.1_ovbvkrawmpkh7nt5qpjhpj46mm:
+    resolution: {integrity: sha1-QYoHt1SkelmUAklCQSKLBWxR87c=, tarball: '@teambit/react.v17.docs-template/-/@teambit-react.v17.docs-template-0.0.1.tgz'}
+    peerDependencies:
+      react: '*'
+      react-dom: '*'
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      '@teambit/react.ui.docs-app': registry.npmjs.org/@teambit/react.ui.docs-app/0.0.200_5ivvltwuv3rb6oak2mu4xmljha
+      core-js: registry.npmjs.org/core-js/3.31.0
+      react: registry.npmjs.org/react/17.0.2
+      react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
+    transitivePeerDependencies:
+      - '@testing-library/react'
+      - '@types/react'
+      - encoding
+      - graphql
+      - typescript
     dev: false
 
   /@teambit/react.webpack.react-webpack/0.0.29_ammhkhg3omc4mpd5qu5vhytpri:
@@ -7952,7 +7977,7 @@ packages:
       '@teambit/base-ui.input.error': registry.npmjs.org/@teambit/base-ui.input.error/1.0.1_biqbaboplfbrettd7655fr4n2y
       '@teambit/base-ui.surfaces.split-pane.hover-splitter': registry.npmjs.org/@teambit/base-ui.surfaces.split-pane.hover-splitter/1.0.0_biqbaboplfbrettd7655fr4n2y
       '@teambit/base-ui.surfaces.split-pane.split-pane': registry.npmjs.org/@teambit/base-ui.surfaces.split-pane.split-pane/1.0.0_biqbaboplfbrettd7655fr4n2y
-      classnames: registry.npmjs.org/classnames/2.2.6
+      classnames: registry.npmjs.org/classnames/2.3.1
       core-js: registry.npmjs.org/core-js/3.31.0
       prism-react-renderer: registry.npmjs.org/prism-react-renderer/1.3.5_react@18.2.0
       react: registry.npmjs.org/react/18.2.0
@@ -8343,7 +8368,7 @@ packages:
     dependencies:
       '@teambit/documenter.ui.anchor': registry.npmjs.org/@teambit/documenter.ui.anchor/4.0.6_biqbaboplfbrettd7655fr4n2y
       '@teambit/documenter.ui.heading': registry.npmjs.org/@teambit/documenter.ui.heading/4.1.4_biqbaboplfbrettd7655fr4n2y
-      classnames: registry.npmjs.org/classnames/2.2.6
+      classnames: registry.npmjs.org/classnames/2.3.1
       core-js: registry.npmjs.org/core-js/3.31.0
       react: registry.npmjs.org/react/18.2.0
       react-dom: registry.npmjs.org/react-dom/18.2.0_react@18.2.0
@@ -8453,7 +8478,7 @@ packages:
       react-dom:
         optional: true
     dependencies:
-      classnames: registry.npmjs.org/classnames/2.2.6
+      classnames: registry.npmjs.org/classnames/2.3.1
       core-js: registry.npmjs.org/core-js/3.31.0
       react: registry.npmjs.org/react/18.2.0
       react-dom: registry.npmjs.org/react-dom/18.2.0_react@18.2.0

@@ -47,6 +47,7 @@
         "@teambit/preview.react-preview": "^0.0.36",
         "@teambit/react.jest.react-jest": "^0.0.6",
         "@teambit/react.react-env": "^0.1.2",
+        "@teambit/react.v17.docs-template": "^0.0.1",
         "@teambit/typescript.typescript-compiler": "^0.0.9",
         "@types/jest": "27.5.1",
         "@typescript-eslint/eslint-plugin": "4.29.3",
